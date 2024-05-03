@@ -1,12 +1,16 @@
 <mat-sidenav-container fullscreen>
     <mat-toolbar color="primary">
-        <button mat-icon-button routerLink="/dashboard">Logo</button>
+        <button mat-icon-button routerLink="/dashboard">
+            <img src="https://nwcmc.gov.in/web/upload_files/home_images/web_logo/weblogo6364d3f0f495b6ab9dcf8d3b5c6e0b01.png" style="width: 80%;" alt="mnapa logo">
+        </button>
         <div class="ml-auto">
-            <button mat-button>Dashboard</button>
-            <button mat-button routerLink="/studentForm">Add Stuent Details</button>
-            <button mat-button>log Out</button>
+            <button mat-button>Record 2023-24</button>
+            <button mat-button>Events 2023-24</button>
+            <button mat-button routerLink="/studentForm">+Add Stuent Details</button>
+            <button mat-button (click)="onUserLogOut()">Log Out</button>
         </div>
 
     </mat-toolbar>
+    <app-student-table></app-student-table>
 
 </mat-sidenav-container>

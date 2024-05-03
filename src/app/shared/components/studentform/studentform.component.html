@@ -1,63 +1,133 @@
-<h1 class="text-center text-bold">Student Form</h1>
-<div class="container mt-4">
-    <form>
-        <div class="form-row">
-            <div class="form-group col-md-2">
-                <label for="inputId">Id</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-10">
-                <label for="inputName">Name</label>
-                <input type="text" class="form-control">
-            </div>
+<!-- <div class="contaainer">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-center text-bold mt-4">Student Form</h1>
         </div>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="inputPassword">Password</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputGender">Gender</label>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio1">Male</label>
-                </div>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio2">Female</label>
-                </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-primary" routerLink="/dashboard">Back To Dashboard</button>
 
-            </div>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="inputDob">DOB</label>
-                <input type="number" class="form-control">
-            </div>
-            <div class="form-group col-md-8">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control">
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Subject enrolled</label>
-                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                    <option selected>Choose...</option>
-                    <option value="1">HTML</option>
-                    <option value="2">CSS</option>
-                    <option value="3">JavaScript</option>
-                    <option value="4">Angular</option>
-                    <option value="5">Node js</option>
-                </select>
-
-            </div>
-        </div>
-        <div class="text-center">
-            <div class="form-group">
-                <button class="btn btn-primary mr-4 " type="button" *ngIf="isUpadating">Update Form</button>
-                <button class="btn btn-success mb-4" type="submit" *ngIf="!isUpadating ">Create Form</button>
-            </div>
-        </div>
+    </div>
+</div> -->
+<nav class="navbar navbar-light bg-light">
+    <h1 class="navbar-brand student">Student Form</h1>
+    <!-- <a class="navbar-brand">Student Form</a> -->
+    <form class="form-inline">
+        <button type="button" class="btn btn-primary" routerLink="/dashboard">Back To Dashboard</button>
     </form>
+  </nav>
+<div class="jumbotron mt-4">
+    <div class="container mt-4">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="inputId">नोंदणी क्रमांक</label>
+                    <input type="text" #id class="form-control">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="inputName">विद्यार्थ्यांचे नाव</label>
+                    <input type="text" #name class="form-control">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="inputName">वडिलांचे नाव</label>
+                    <input type="text" #name class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputId">पालकांचे पूर्ण नाव</label>
+                    <input type="text" #id class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">पालकांचा/ वडिलांचा व्यवसाय</label>
+                    <input type="text" #name class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">जन्म स्थळ</label>
+                    <input type="text" #name class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputId">धर्म/जात</label>
+                    <input type="text" #id class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">मातृभाषा</label>
+                    <input type="text" #name class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">प्रवेश दिनांक</label>
+                    <input type="text" #name class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputId">यापूर्वी शिक्षण घेतलेले शाळा आणि वर्ग</label>
+                    <input type="text" #id class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">प्रवेश समायी वर्ग</label>
+                    <input type="text" #name class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">विद्यार्थ्याचे परिचय चिन्ह</label>
+                    <input type="text" #name class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputId">निर्गम समयी वर्ग आणि दिनाक</label>
+                    <input type="text" #id class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">शाळा सोडल्याचे कारण </label>
+                    <input type="text" #name class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputName">टीसी नोंद क्रमांक व. दिनाक</label>
+                    <input type="text" #name class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="inputGender">Gender</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" #male id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" #female id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Female</label>
+                    </div>
+
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">वर्ग</label>
+                    <select class="custom-select my-1 mr-sm-2" #selectsub id="inlineFormCustomSelectPref">
+                        <option selected>Choose...</option>
+                        <option value="1">पहिला</option>
+                        <option value="2">दुसरा</option>
+                        <option value="3">तिसरा</option>
+                        <option value="4">चोथा</option>
+                        <option value="5">पाचवा</option>
+                        <option value="6">सहावा</option>
+                        <option value="7">सातवा</option>
+                        <option value="8">आठवा</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="form-group">
+                    <button class="btn btn-secondary btn-lg btn-block" type="button" *ngIf="isUpadating">Update Form</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" *ngIf="!isUpadating">Create Form</button>
+                </div>
+                <!-- (click)="createForm(id.value ,name.value,password.value,male.value,female.value,dob.value,address.value,selectsub.value)" -->
+            </div>
+        </form>
+    </div>
 </div>

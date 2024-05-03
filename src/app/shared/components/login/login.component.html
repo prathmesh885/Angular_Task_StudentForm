@@ -4,7 +4,7 @@
             <div class="login" *ngIf="isHavingAccount">
                 <h3 class="text-center">Login</h3>
                 <div class="input-group mt-4">
-                    <input type="text" placeholder="example@xyz.com" id="email" class="form-control">
+                    <input type="text" placeholder="example@xyz.com" #email id="email" class="form-control">
                     <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-regular fa-envelope"></i>
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <input [type]="isPasswordVisible ? 'text':'password'" placeholder="Password" id="password"
+                    <input [type]="isPasswordVisible ? 'text':'password'" #password placeholder="Password"
                         class="form-control">
                     <div class="input-group-append" (click)="isPasswordVisible = !isPasswordVisible">
                         <span class="input-group-text" id="basic-addon1">
@@ -23,13 +23,15 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <button class="btn btn-primary" (click)="login()">Login</button>
+                    <button class="btn btn-primary btn-lg btn-block" (click)="login(email.value,password.value)">Login</button>
                 </div>
             </div>
-            <div class="signup" *ngIf="!isHavingAccount">
+
+            <!-- *************************************** sign up******************************** -->
+            <!-- <div class="signup" *ngIf="!isHavingAccount">
                 <h3>Sign up</h3>
                 <div class="input-group">
-                    <input type="text" placeholder="example@xyz.com" id="email" class="form-control">
+                    <input type="text" placeholder="example@xyz.com" #email id="email" class="form-control">
                     <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-regular fa-envelope"></i>
@@ -37,7 +39,7 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <input [type]="isPasswordVisible ? 'text':'password'" placeholder="Password" id="password"
+                    <input [type]="isPasswordVisible ? 'text':'password'" #password placeholder="Password" id="password"
                         class="form-control">
                     <div class="input-group-append" (click)="isPasswordVisible = !isPasswordVisible">
                         <span class="input-group-text" id="basic-addon1">
@@ -48,8 +50,8 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <input [type]="isPasswordVisible2 ? 'text':'password'" placeholder="Confirm Password" id="password"
-                        class="form-control">
+                    <input [type]="isPasswordVisible2 ? 'text':'password'" #cpassword placeholder="Confirm Password"
+                        id="password" class="form-control">
                     <div class="input-group-append" (click)="isPasswordVisible2 = !isPasswordVisible2">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-eye" [ngClass]="{
@@ -57,9 +59,10 @@
                             }"></i>
                         </span>
                     </div>
-                </div>
+                </div> 
                 <div class="text-right">
-                    <button class="btn btn-warning">Sign Up</button>
+                    <button class="btn btn-warning"
+                        (click)="signUpForm(email.value,password.value,cpassword.value)">Sign Up</button>
                 </div>
             </div>
             <p *ngIf="isHavingAccount">
@@ -69,8 +72,8 @@
                 <a href="javascript:;" (click)="isHavingAccount = !isHavingAccount"> Already have account!</a>
             </p>
             <div class="forgotPassword">
-                
-            </div>
+
+            </div> -->
         </div>
     </div>
 </div>
